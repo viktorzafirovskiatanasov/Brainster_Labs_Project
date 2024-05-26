@@ -1,0 +1,32 @@
+@use "./variables" as var;
+@use 'sass:math';
+
+
+
+// RESPONSIVE LAPTOP FIRST DESIGN MIXINS
+@mixin break-point-sm {
+  @media (min-width: 425px) {
+    @content;
+  }
+}
+@mixin break-point-md {
+  @media (min-width: 769px) {
+    @content;
+  }
+}
+@mixin laptop-max-styles {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin laptop-m-styles {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+
+
+
+

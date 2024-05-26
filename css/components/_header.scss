@@ -1,0 +1,188 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+@use "sass:math";
+header {
+  nav {
+    width: 90%;
+    margin: 0 auto;
+
+    .logo {
+      font-size: var.$font-size-smaller;
+      font-weight: var.$font-weight-bolder;
+      text-transform: uppercase;
+      
+    }
+  
+    .btn {
+      background-color: var.$background-color-tertiary;
+      color: var.$text-color-secondary;
+      &:hover{
+        color: var.$text-color-secondary;
+        background-color: var.$background-color-tertiary;
+      }
+    }
+    img {
+      width: 50px;
+      height: 50px;
+        
+    }
+   
+    p {
+      font-size: var.$font-size-base;
+      margin: 0px;
+    }
+    .nav-bar-light {
+      .navbar-toggler-icon {
+        background-image: url("../imgs/menu.png");
+        background-size: cover;
+        padding: 0;
+        width: 2.5em;
+        height: 2.5em;
+      }
+      
+           
+         
+      }
+    }
+   
+    @include mix.laptop-l-styles{
+      a, .btn{
+         font-size: var.$font-size-smaller;
+         text-align: center;
+      }
+    }
+  }
+  .hero {
+    height: calc(100vh - 122.5px);
+   background-color: var.$background-color-secondary;
+   position: relative;
+   .shape{
+      position : absolute;
+      
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: transparent;
+      box-shadow:  0 0 0 15px #03a9f4;
+      text-align: center;
+      transition: .5s;
+      .text-box{
+         transition: .5s;
+         display: none;
+         text-align: center;
+         width: 280px;
+         height: 280px;
+         margin:  auto;
+         margin-top: 10px;
+         background-color: #22222257;
+         h2{
+            color: var.$text-color-secondary;
+            margin: 0;
+         }
+         a{
+            background-color: var.$background-color-tertiary;
+            color: var.$text-color-secondary;
+            margin-top: math.div(var.$gutter-base,2);
+         }
+      }
+      &:hover{
+         border-radius: 0;
+         .text-box{
+            display: block;
+         }
+      }
+      &:before{
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-image: url("../imgs/academy/Screenshot_1.png");
+         background-position: center;
+         
+         border: 10px solid #03a9f4;
+         z-index: -1;
+         
+         
+      }
+      
+   }
+  
+
+   h1{
+    font-weight: var.$font-weight-bold;
+   color: var.$text-color-secondary;
+    height: 10%;
+    text-align: center;
+    
+ }
+
+   .img-accordion{
+    max-width: 100%;
+    margin-top: auto;
+    height: 90%;
+    display: flex;
+    cursor: pointer;
+   
+   
+    .img{
+      flex: 1;
+      height: 100%;
+      border:1px solid #222;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      transition: all 0.3s;
+      &:hover{
+        flex: 6;
+        a{
+          transform: rotate(0);
+          
+          
+      }
+    }
+    }
+      
+      a{
+        position: absolute;
+        bottom: 0; left: 0;
+        background-color: rgba(0,0,0,0.6);
+        padding: math.div(var.$gutter-base , 4) math.div(var.$gutter-base , 3);
+        font-size: var.$font-size-small ;
+        color: #fff;
+        text-transform: uppercase;
+        white-space: nowrap;
+        transform: rotate(-90deg);
+        transform-origin: 0 0;
+        transition: all 0.3s;
+        
+    }
+    
+}
+.img1{ background-image: url("../imgs/academy/fullstack.jpg"); }
+.img2{ background-image: url("../imgs/academy/36489459-flat-design-illustration-concept-for-digital-marketing-concept-for-web-banner-and-promotional.webp"); }
+.img3{ background-image: url("../imgs/academy/127761017-graphic-design-concept-idea-of-digital-art-and-creative-mind-banner-for-web-page-flat-vector.webp"); }
+  
+  .img4{ background-image: url("../imgs/academy/Screenshot_1.png"); }
+  @include mix.mobile-l-styles{
+   background-image: url("../imgs/sun-tornado.png");
+  }
+  
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+

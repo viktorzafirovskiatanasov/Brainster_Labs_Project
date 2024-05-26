@@ -1,0 +1,96 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+@use "sass:math";
+
+
+.card-section{
+    .selectors-section{
+          .selected{
+            background-color: var.$background-color-tertiary ;
+          }
+            .selector{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: var.$background-color-secondary;
+                padding: math.div(var.$gutter-base,2) var.$gutter-base;
+                
+                .text-box{
+                    color: var.$text-color-secondary;
+                    h5{
+                        font-size: var.$font-size-small;
+                        @include mix.laptop-m-styles{
+                            font-size: var.$font-size-small;
+                        }
+                    }
+                    input[type="checkbox"] {
+                        display: none;
+                    }
+                }
+                .icon-box{
+                    i{
+                        color: var.$background-color-secondary;
+                    }
+                }
+                
+            }
+
+       
+    }
+    .cards{
+        .heading{
+            text-align: center;
+            color: var.$background-color-secondary;
+            font-weight: var.$font-weight-bold;
+        }
+        .card{
+            border-radius: math.div(var.$gutter-base,2);
+            border: none;
+            display: inline-block;
+            padding: 0;
+            margin-bottom: var.$gutter-base;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            &:hover{
+                top: -20px;
+                transform: scale(1.02);
+            }
+            img{
+                border-top-left-radius: math.div(var.$gutter-base,2);
+                border-top-right-radius: math.div(var.$gutter-base,2);
+                
+            }
+            .card-body{
+                .tag{
+                    background-color: var.$background-color-base;
+                    padding:math.div(var.$gutter-base,4)  var.$gutter-base*0.5 ;
+                    
+                    
+                    
+                }
+                .card-title{
+                    margin-top:math.div(var.$gutter-base,2) ;
+                    font-weight: var.$font-weight-bold;
+                }
+                .card-text{
+                    margin-bottom: math.div(var.$gutter-base,2);
+                }
+                .comment{
+                    font-size: var.$font-size-smaller;
+                    font-weight: var.$font-weight-bold;
+                }
+            }
+            .card-footer{
+                background-color: var.$text-color-secondary;
+                border: none;
+                padding: var.$gutter-base 0 0 0;
+                display: flex;
+                justify-content: end;
+                .btn{
+                    background-color: var.$background-color-tertiary;
+                    color: var.$text-color-secondary;
+                    padding: var.$gutter-base*0.3 var.$gutter-base ;
+                }
+            }
+        }
+    }
+}

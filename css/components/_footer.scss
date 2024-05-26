@@ -1,0 +1,11 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+
+footer{
+    background-color: var.$background-color-secondary;
+    .content{
+        p{
+            color: var.$text-color-secondary;
+        }
+    }
+}

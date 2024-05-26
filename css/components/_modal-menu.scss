@@ -1,0 +1,39 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+@use "sass:math";
+
+
+.modal-dialog {
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    margin: 0;
+    .modal-content {
+      height: 100%;
+      border: 0;
+      border-radius: 0;
+      .modal-body{
+        .btn{
+          background-color: var.$background-color-tertiary;
+          color: var.$text-color-secondary;
+          
+        }
+      }
+      @include mix.break-point-sm{
+        
+                .navbar-nav{
+                    li{
+                        text-align: center;
+                        font-size: var.$font-size-medium;
+                        .btn{
+                            width: 50%;
+                          margin: 0 auto;
+                        }
+                    }
+                }
+                
+            
+        }
+      }
+    }
+  

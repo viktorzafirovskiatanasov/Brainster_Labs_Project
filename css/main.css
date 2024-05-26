@@ -1,0 +1,396 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #fcd232;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.title {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 768px) {
+  .title {
+    width: 80%;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+  }
+}
+@media (max-width: 425px) {
+  .title {
+    width: 80%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.title {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .title {
+    flex-direction: column;
+  }
+}
+@media (max-width: 575px) {
+  .title {
+    flex-direction: column;
+  }
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: sans-serif;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.title {
+  width: 50%;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h2 {
+  font-size: 2.1875rem;
+}
+
+p {
+  margin-top: 0.9375rem;
+}
+
+hr {
+  margin-top: 1.875rem;
+  width: 20%;
+  height: 0.1875rem;
+  background-color: #eb3b3b;
+}
+
+header nav {
+  width: 90%;
+  margin: 0 auto;
+}
+header nav .logo {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+header nav .btn {
+  background-color: #ff1300;
+  color: #FFF;
+}
+header nav .btn:hover {
+  color: #FFF;
+  background-color: #ff1300;
+}
+header nav img {
+  width: 50px;
+  height: 50px;
+}
+header nav p {
+  font-size: 1rem;
+  margin: 0px;
+}
+header nav .nav-bar-light .navbar-toggler-icon {
+  background-image: url("../imgs/menu.png");
+  background-size: cover;
+  padding: 0;
+  width: 2.5em;
+  height: 2.5em;
+}
+@media (min-width: 1024px) {
+  header nav a,
+  header nav .btn {
+    font-size: 1rem;
+  }
+}
+header .hero {
+  height: calc(100vh - 122.5px);
+  background-color: #302f38;
+  position: relative;
+}
+header .hero .shape {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: 0 0 0 15px #03a9f4;
+  text-align: center;
+  transition: 0.5s;
+}
+header .hero .shape .text-box {
+  transition: 0.5s;
+  display: none;
+  text-align: center;
+  width: 280px;
+  height: 280px;
+  margin: auto;
+  margin-top: 10px;
+  background-color: rgba(34, 34, 34, 0.3411764706);
+}
+header .hero .shape .text-box h2 {
+  color: #FFF;
+  margin: 0;
+}
+header .hero .shape .text-box a {
+  background-color: #ff1300;
+  color: #FFF;
+  margin-top: 0.9375rem;
+}
+header .hero .shape:hover {
+  border-radius: 0;
+}
+header .hero .shape:hover .text-box {
+  display: block;
+}
+header .hero .shape:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../imgs/academy/Screenshot_1.png");
+  background-position: center;
+  border: 10px solid #03a9f4;
+  z-index: -1;
+}
+header .hero h1 {
+  font-weight: 600;
+  color: #FFF;
+  height: 10%;
+  text-align: center;
+}
+header .hero .img-accordion {
+  max-width: 100%;
+  margin-top: auto;
+  height: 90%;
+  display: flex;
+  cursor: pointer;
+}
+header .hero .img-accordion .img {
+  flex: 1;
+  height: 100%;
+  border: 1px solid #222;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: all 0.3s;
+}
+header .hero .img-accordion .img:hover {
+  flex: 6;
+}
+header .hero .img-accordion .img:hover a {
+  transform: rotate(0);
+}
+header .hero .img-accordion a {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0.46875rem 0.625rem;
+  font-size: 0.9375rem;
+  color: #fff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transform: rotate(-90deg);
+  transform-origin: 0 0;
+  transition: all 0.3s;
+}
+header .hero .img1 {
+  background-image: url("../imgs/academy/fullstack.jpg");
+}
+header .hero .img2 {
+  background-image: url("../imgs/academy/36489459-flat-design-illustration-concept-for-digital-marketing-concept-for-web-banner-and-promotional.webp");
+}
+header .hero .img3 {
+  background-image: url("../imgs/academy/127761017-graphic-design-concept-idea-of-digital-art-and-creative-mind-banner-for-web-page-flat-vector.webp");
+}
+header .hero .img4 {
+  background-image: url("../imgs/academy/Screenshot_1.png");
+}
+@media (max-width: 575px) {
+  header .hero {
+    background-image: url("../imgs/sun-tornado.png");
+  }
+}
+
+footer {
+  background-color: #302f38;
+}
+footer .content p {
+  color: #FFF;
+}
+
+.hero-form {
+  height: calc(100vh - 189px);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.hero-form .error {
+  border: 2px solid red;
+}
+.hero-form h1 {
+  font-size: 3.75rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.875rem;
+}
+.hero-form .form {
+  height: -moz-max-content;
+  height: max-content;
+}
+.hero-form .form .btn {
+  padding: 1.3125rem;
+  background-color: #ff1300;
+  margin-top: 1.875rem;
+}
+.hero-form .form .form-group label {
+  font-weight: 800;
+}
+.hero-form .form .form-group input {
+  padding: 1.875rem;
+}
+.hero-form .form .form-group .form-select {
+  padding: 1.4423076923rem;
+}
+@media (max-width: 1024px) {
+  .hero-form {
+    height: -moz-max-content;
+    height: max-content;
+    margin: 3.75rem 0;
+  }
+}
+
+.card-section .selectors-section .selected {
+  background-color: #ff1300;
+}
+.card-section .selectors-section .selector {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #302f38;
+  padding: 0.9375rem 1.875rem;
+}
+.card-section .selectors-section .selector .text-box {
+  color: #FFF;
+}
+.card-section .selectors-section .selector .text-box h5 {
+  font-size: 0.9375rem;
+}
+@media (min-width: 1024px) {
+  .card-section .selectors-section .selector .text-box h5 {
+    font-size: 1.25rem;
+  }
+}
+.card-section .selectors-section .selector .text-box input[type=checkbox] {
+  display: none;
+}
+.card-section .selectors-section .selector .icon-box i {
+  color: #302f38;
+}
+.card-section .cards .heading {
+  text-align: center;
+  color: #302f38;
+  font-weight: 600;
+}
+.card-section .cards .card {
+  border-radius: 0.9375rem;
+  border: none;
+  display: inline-block;
+  padding: 0;
+  margin-bottom: 1.875rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.card-section .cards .card:hover {
+  top: -20px;
+  transform: scale(1.02);
+}
+.card-section .cards .card img {
+  border-top-left-radius: 0.9375rem;
+  border-top-right-radius: 0.9375rem;
+}
+.card-section .cards .card .card-body .tag {
+  background-color: #fcd232;
+  padding: 0.46875rem 0.9375rem;
+}
+.card-section .cards .card .card-body .card-title {
+  margin-top: 0.9375rem;
+  font-weight: 600;
+}
+.card-section .cards .card .card-body .card-text {
+  margin-bottom: 0.9375rem;
+}
+.card-section .cards .card .card-body .comment {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.card-section .cards .card .card-footer {
+  background-color: #FFF;
+  border: none;
+  padding: 1.875rem 0 0 0;
+  display: flex;
+  justify-content: end;
+}
+.card-section .cards .card .card-footer .btn {
+  background-color: #ff1300;
+  color: #FFF;
+  padding: 0.5625rem 1.875rem;
+}
+
+.modal-dialog {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  margin: 0;
+}
+.modal-dialog .modal-content {
+  height: 100%;
+  border: 0;
+  border-radius: 0;
+}
+.modal-dialog .modal-content .modal-body .btn {
+  background-color: #ff1300;
+  color: #FFF;
+}
+@media (min-width: 425px) {
+  .modal-dialog .modal-content .navbar-nav li {
+    text-align: center;
+    font-size: 1.25rem;
+  }
+  .modal-dialog .modal-content .navbar-nav li .btn {
+    width: 50%;
+    margin: 0 auto;
+  }
+}/*# sourceMappingURL=main.css.map */
